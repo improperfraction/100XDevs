@@ -8,6 +8,10 @@ app.use((req, res, next)=>{
     console.log(`${req.method} is callled for ${req.url}`);
     next();
 })
+app.get("/", (req, res)=>{
+    let x=2+2;
+    res.send(`<b>The value of x is: ${x}<b>`);
+})
 
 app.get("/", (req, res)=>{
     let x=2+2;
