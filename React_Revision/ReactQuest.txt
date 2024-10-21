@@ -1,0 +1,43 @@
+//1. what is React?What are the benefits of React?
+//2. Difference between state and props?
+3. What is useReducer and UseContext api?
+4. Tell me hooks you have used?
+5. What is redux ? when to use REdux
+6. What is conditional rendering in React?
+7. Presentation component vs functional component in React.js?
+8. What is redux-toolkit and what difference b/w redux and redux-toolkit?
+9. How api call handle in redux and how can you get and display user name from redux?
+//10. Class and functional components?
+11. how to use Redux and contextapi in react?
+12. React lifecycle methods?
+//13. React optimization ways- useEffect ?
+14. What is the need of de structuring syntax
+15. strict mode 
+//16. what is JSX? can browser understand JSX?
+17. difference berweeb SPA and MPA?
+18. ES6 features you have used?
+19. controlled and uncontrolled component
+//20. difference between Virtual DOM and Real DOM
+21. difference between React.memo and usememo 
+
+
+
+
+
+
+
+
+
+JS questions
+1. What is JS? and how does Browser understands the your code?
+1. Git commands: How to commit ,merge code, how to resolve merge conflicts?
+2. What is hoisting in JS
+3. What are higher-order functions in JS?
+4. Difference between var, let, and const in JS?
+5. splice, slice diff
+6. filter, map and reduce usage in JS?
+7. why is arrow function is needed?
+8. what is promises? explain?
+9. diff between map and foreach
+10. primitive and non-primitive datatype
+11. difference between null and undefined
