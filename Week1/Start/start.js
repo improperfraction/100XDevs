@@ -104,6 +104,12 @@ function print()
     console.log(2);
 }
 
+
+let jet= "[object string]";
+
+console.log(jet.slice(8,-1));
+
+
 print1(1, print);
 
 
