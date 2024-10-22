@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form  id="f1" action="form.php">
+        <h1 id="head">user form</h1>
+        <input type="text" name="username" id="uname" placeholder="username">
+        <input type="password" name="password" id="pwd"placeholder="password">
+        <button  type="button" id="subbtn">try it</button>
+    </form>
+    <!-- //<form action="/form1.php"> -->
+    <input oninput="debouncing()" type="number" name="num" id="n1">
+    <input oninput="debouncing()" type="number" name="num" id="n2">
+    <button type="button" id="sum">calculate sum</button>
+    <button type="reset" id="reset">reset</button>
+    <p id="demo"></p>
+    <!-- </form> -->
+
+    <div id="box" onmouseover="mdown(this)" onmouseout="mout(this)">
+       click me
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
