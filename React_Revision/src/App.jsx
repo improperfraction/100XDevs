@@ -6,11 +6,14 @@ const Memoize= lazy(()=> import( './components/Memoize'));
 const Ref= lazy(()=> import( './components/Ref'));
 const Drill= lazy(()=> import('./components/Drill'));
 const Context= lazy(()=> import('./components/Context'));
-const REcoil= lazy(()=> import('./components/Recoil'));
+const Recoil= lazy(()=> import('./components/Recoil'));
+const Callback= lazy(()=> import('./components/Callback'))
+const ConditionalR= lazy(()=> import('./components/ConditionalRend'))
+
 
 
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
-import Recoil from './components/Recoil';
+//import ConditionalR from './components/ConditionalRend';
 
 
 function App() {
@@ -27,8 +30,8 @@ function App() {
           <Route path='/drill' element={<Suspense fallback={"Loading..."}><Drill/></Suspense>}></Route>
           <Route path='/context' element={<Suspense fallback={"Loading..."}><Context/></Suspense>}></Route>
           <Route path='/recoil' element={<Suspense fallback={"Loading..."}><Recoil/></Suspense>}></Route>
-
-
+          <Route path='/callback' element={<Suspense fallback={"Loading..."}><Callback/></Suspense>}></Route>
+          <Route path='/condrend' element={<Suspense fallback={"Loading..."}><ConditionalR/></Suspense>}></Route>
         </Routes>
       </BrowserRouter>
 
@@ -66,6 +69,12 @@ function Bar()
          <button onClick={() => {
           navigate('/recoil');
         }}>Recoil</button>
+        <button onClick={() => {
+          navigate('/callback');
+        }}>Callback</button>
+         <button onClick={() => {
+          navigate('/condrend');
+        }}>Conditional Rendering</button>
       </div>
   )
 }

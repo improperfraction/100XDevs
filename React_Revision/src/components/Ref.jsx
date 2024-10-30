@@ -1,23 +1,35 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 
 
-function Ref()
-{
-    const inref= useRef(null);
+function Ref() {
+    // const myRef= useRef(null);
 
-    function focus()
-    {
-        inref.current.focus();
-    }
+    // return(
+    //     <>
+    //     <input ref={myRef} type="text" />
+    //     <button onClick={()=>{
+    //         myRef.current.focus();
+    //     }}>Shift focus</button>
+    //     </>
+    // )
 
-
-    return(
+    const [, forecRender] = useState(0);
+    const render= useRef(0);
+    render.current= render.current +1
+    return (
         <>
-        <input type="number" ref={inref}  />
-        <button onClick={focus}>focus</button>
+            {console.log("rendered")}
+            <p>Component has rendered {render.current}times on click</p>
+            <button onClick={() => {
+                forecRender(Math.random());
+
+            }}>re-render</button>
+
         </>
     )
 }
+
+
 
 export default Ref;

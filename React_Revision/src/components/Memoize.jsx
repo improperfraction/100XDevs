@@ -13,14 +13,15 @@ function Memoize()
         const inp= parseInt(input);
        sum= inp*(inp+1)/2
        return sum; 
-    }, [input]);
+    
+   }, [input]);
 
     return(
         <>
         <input type="number" onChange={(e)=>{
             setInput(e.target.value);
         }}></input>
-        <h3>sum of numbers from 1 to {input} is {add} </h3>
+        <h3>sum of numbers from 1 to {input} is {add || "Enter number"} </h3>
 
         <button onClick={()=>{
             setCount(count+1)
