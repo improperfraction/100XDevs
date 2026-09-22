@@ -44,8 +44,6 @@ router.post("/signup", async (req, res) => {
                 password: req.body.password,
             });
 
-
-
             if (nUser) {
                 const userid = nUser._id;
                 await Account.create({
@@ -75,7 +73,6 @@ router.post('/signin', async (req, res) => {
     if (validatedata.success) {
         const existingUser = await User.findOne({
             username: req.body.username,
-            password: req.body.password
         })
 
         if (existingUser) {

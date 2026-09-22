@@ -2,20 +2,19 @@ import { useState } from "react";
 
 
 
-function Counter()
-{
-    const [count, setCount]= useState(0)
+function Counter() {
 
-    return(
+    const [count, setCount] = useState(0)
+    return (
         <>
-    <h2>Counter {count}</h2>
-    <button onClick={()=>{
-        setCount(count+1)
-    }}>Increment</button>
-    <button onClick={()=>{
-        setCount(count-1)
-    }}> decrement</button>
-    </>
+            <p>Counter value is at {count}</p>
+            <button onClick={() => {
+                setCount(count + 1)
+            }}>Increment</button>
+            <button onClick={() => {
+                setCount(count - 1)
+            }} disabled={count <= 0}>Decrement</button>
+        </>
     )
 }
 

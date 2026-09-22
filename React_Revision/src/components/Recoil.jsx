@@ -1,5 +1,7 @@
-import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
+import { atom, RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
 import countState from "./Atom";
+
+
 
 function Recoil() {
     return (

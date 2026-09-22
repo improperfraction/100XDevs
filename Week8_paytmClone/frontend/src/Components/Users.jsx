@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import SendmoneyBanner from './Sendmoneybanner';
+import Exbanner from './Exbanner';
 function Users({ user }) {
     const navigate = useNavigate();
+
+    const [Tranferbanner, setTransferBanner]= useState(false);
+    const closeTransferBanner= ()=>{
+        setTransferBanner(false);
+    }
     return (
         <div className="flex flex-row items-center justify-between px-6 mt-4">
             <div className="flex items-center	">
@@ -14,9 +22,11 @@ function Users({ user }) {
             <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={() => {
                 localStorage.setItem("Reciver_fullname", `${user.firstName} ${user.lastName}`);
                 localStorage.setItem("Reciver_id", user._id);
-                navigate('/sendmoney');
-
+                //navigate('/sendmoney');
+                setTransferBanner(true)
+                
             }}>Send Money</button>
+             {Tranferbanner &&  <Exbanner closeTransferBanner={closeTransferBanner}></Exbanner> }
         </div>
     )
 }

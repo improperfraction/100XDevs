@@ -14,18 +14,30 @@ function Ref() {
     //     </>
     // )
 
-    const [, forecRender] = useState(0);
-    const render= useRef(0);
-    render.current= render.current +1
+    // const [, forecRender] = useState(0);
+    // const render= useRef(0);
+    // render.current= render.current +1
+    // return (
+    //     <>
+    //         {console.log("rendered")}
+    //         <p>Component has rendered {render.current}times on click</p>
+    //         <button onClick={() => {
+    //             forecRender(Math.random());
+
+    //         }}>re-render</button>
+
+    //</>
+    //)
+
+    const myref = useRef(null);
+
     return (
         <>
-            {console.log("rendered")}
-            <p>Component has rendered {render.current}times on click</p>
+
+            <input ref={myref} type="text"></input>
             <button onClick={() => {
-                forecRender(Math.random());
-
-            }}>re-render</button>
-
+                myref.current.focus();
+            }}>click here to move focus</button>
         </>
     )
 }

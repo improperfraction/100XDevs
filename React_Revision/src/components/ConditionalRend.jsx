@@ -7,13 +7,15 @@ function ConditionalR() {
             <button onClick={() => {
                 SetCount(count + 1)
             }}>Count value is {count}</button>
+                {count % 2 == 0 && <p>{count} is even number</p>}
+                {count %2==1 && <p>{count} is odd number</p>}
+               
             {/* <IfElse count={count}></IfElse> */}
             {/* <Ternary count={count}></Ternary> */}
-            <AndAnd count={count}></AndAnd>
+            {/* <AndAnd count={count}></AndAnd> */}
         </>
     )
 }
-
 //1. Using if-else statement
 function IfElse({ count }) {
     if (count % 2 == 0) {
@@ -42,8 +44,8 @@ function Ternary({ count }) {
 function AndAnd({ count }) {
     return (
         <div>
-            {count % 2 == 0 && <p>Count is even number</p>}
-            {count % 2 == 1 && <p>Count is odd number</p>}
+            {count % 2 == 0 && <p>{count} is even number</p>}
+            {count % 2 == 1 && <p>{count} is odd number</p>}
 
         </div>
     )

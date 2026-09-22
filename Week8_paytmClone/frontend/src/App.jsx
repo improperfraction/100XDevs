@@ -14,15 +14,13 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/signup' element={<Suspense fallback={<Loading/>}><Signup/></Suspense>}></Route>
+                <Route path='/signup' element={<Suspense fallback={<Loading/>}><Signup /></Suspense>}></Route>
                 <Route path='/signin' element={<Suspense fallback={<Loading/>}><Signin /></Suspense>}></Route>
                 <Route path='/dashboard' element={<Suspense fallback={<Loading/>}><Dboard /></Suspense>}></Route>
                 <Route path='/sendmoney' element={<Suspense fallback={<Loading/>}><SendMoney /></Suspense>}></Route>
-               {/* <Route path='/' element={<Suspense fallback={<Loading/>}><Home /></Suspense>}></Route> */}
-               <Route path='/' element={<Home></Home>}></Route>
+                <Route path='/' element={<Home></Home>}></Route>
             </Routes>
         </BrowserRouter>
-
     )
 }
 

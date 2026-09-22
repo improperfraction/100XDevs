@@ -1,49 +1,45 @@
 import React from "react";
 import { useState } from "react"
 
-
+let players = ["mayur", "abhi", "rakhi", "neha", "sidhy"];
 
 function Memo() {
-    
-    const [count, setCount]= useState(0);
+
+    const [count, setCount] = useState(0);
     return (
         <>
-        <h2>Counter is {count}</h2>
-            <button onClick={() => {
+            <h2>Counter is {count}</h2>
+            <button className="text-white mt-5 lg:mt-7 bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-full text-base lg:text-lg px-5 py-2.5 text-center me-2 mb-2" onClick={() => {
                 setCount(count + 1);
             }}>Increment</button>
-            <Banner uname={"Mayur"}></Banner>
+            <Banner uname={"Abhi"}></Banner>
+            <List list={players} />
+
         </>
 
     )
 }
 
-// function Counter()
-// {
-//     const [count, setCount]= useState(0);
-//     return (
-//         <>
-//         <h2>Counter is {count}</h2>
-//             <button onClick={() => {
-//                 setCount(count + 1);
-//             }}>Increment</button>
-//         </>
-//     )
-   
-// }
+const Banner = React.memo(({ uname }) => {
+    return (
+        <>
+            <p>Hi {uname}</p>
+        </>
+    )
+})
 
-const Banner= React.memo(({uname})=>
-    {
-        console.log("banner rendered");
-        return(
-            <h2>Hello, {uname}</h2>    )
-    })
+const List = React.memo(({ list }) => {
+    return (
+        <>
+            {list.map((player, index) => {
+                return (
+                    <p key={index}>{player}</p>
+                )
+            })}
+        </>
+    )
+})
 
-// const Banner= React.memo(({uname})=>
-// {
-//     console.log("banner rendered");
-//     return(
-//         <h2>Hello, {uname}</h2>    )
-// })
+
 
 export default Memo
